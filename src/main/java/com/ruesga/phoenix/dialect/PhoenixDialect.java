@@ -239,6 +239,11 @@ public class PhoenixDialect extends Dialect {
                 }
                 return sql;
             }
+
+            @Override
+            public boolean bindLimitParametersInReverseOrder() {
+                return true;
+            }
         };
     }
 
